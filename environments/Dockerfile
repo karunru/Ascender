@@ -6,7 +6,7 @@ ARG USER_NAME=challenger
 ARG GROUP_NAME=challengers
 ARG UID=1000
 ARG GID=1000
-ARG PYTHON_VERSION=3.8
+ARG PYTHON_VERSION=3.9
 ARG APPLICATION_DIRECTORY=/home/${USER_NAME}/${PROJECT_NAME}
 ARG RUN_POETRY_INSTALL_AT_BUILD_TIME="false"
 
@@ -21,7 +21,7 @@ RUN add-apt-repository ppa:deadsnakes/ppa
 
 RUN apt update && apt install --no-install-recommends -y \
     git curl make ssh openssh-client \
-    python${PYTHON_VERSION} python3-pip python-is-python3
+    python${PYTHON_VERSION} python${PYTHON_VERSION}-distutils python3-pip python-is-python3
     
 # Following is needed to swtich default python3 version
 # For detail, please check following link https://unix.stackexchange.com/questions/410579/change-the-python3-default-version-in-ubuntu
