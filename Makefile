@@ -2,6 +2,14 @@
 black-check:
 	poetry run black --check src tests
 
+.PHONY: notebook
+notebook:
+	poetry run jupyter notebook --ip 0.0.0.0 --port 8000
+
+.PHONY: black-notebook
+black-notebook:
+	poetry run black --ipynb notebook
+
 .PHONY: black
 black:
 	poetry run black src tests
