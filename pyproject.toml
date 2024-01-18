@@ -25,11 +25,11 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.10, <3.12"
 pip = "^23.1.2"
-ruff = "^0.1.6"
 
 [tool.poetry.group.dev.dependencies]
+ruff = "^0.1.6"
 black = "^23.1.0"
 isort = "^5.10.1"
 mdformat-gfm = "^0.3.5"
@@ -58,7 +58,7 @@ pytorch-lightning = "^2.0.4"
 segmentation-models-pytorch = "^0.3.3"
 torch-optimizer = "^0.3.0"
 pandarallel = "^1.6.5"
-imbalanced-learn = "^0.10.1"
+imbalanced-learn = "^0.11.0"
 mlcrate = "^0.2.0"
 seaborn = "^0.12.2"
 matplotlib-venn = "^0.11.9"
@@ -76,8 +76,15 @@ darts = "^0.24.0"
 nbdime = "^3.2.1"
 jupyter-black = "^0.3.4"
 nlplot = "^1.6.0"
-xgboost = "^1.7.6"
+xgboost = "^2.0.0"
 polars = "^0.18.4"
+xfeat = {git = "git@github.com:karunru/xfeat.git"}
+wandb = "^0.16.0"
+optuna = "^3.4.0"
+tensorflow-estimator = "^2.15.0"
+tensorflow = "^2.15.0"
+tensorflow-hub = "^0.15.0"
+pytorch-tabnet = "^4.1.0"
 
 [tool.black]
 line-length = 88
